@@ -14,10 +14,10 @@ public class GlobalExceptions {
 
 	@ExceptionHandler(IdNotFoundException.class) 
 	public ResponseEntity<String> employeeNotFound(IdNotFoundException e){ 
-		return new ResponseEntity<String>(e.getMessage(),new HttpHeaders(),HttpStatus.NOT_FOUND); 
+		return new ResponseEntity<String>(e.getMessage(),new HttpHeaders(),HttpStatus.OK); 
 	}
 	@ExceptionHandler(IdAlreadyExistsException.class) 
 	public ResponseEntity<String> IdAlreadyExists(IdAlreadyExistsException e){ 
-		return new ResponseEntity<String>(e.getMessage(),new HttpHeaders(),HttpStatus.NOT_FOUND); 
+		return new ResponseEntity<String>(e.getMessage(),new HttpHeaders(),HttpStatus.OK); 
 	}
 }
